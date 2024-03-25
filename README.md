@@ -1,92 +1,126 @@
-# 项目开发管理规章制度
+# 项目开发统一化管理方案V1.0
+
+## 文档编写权益
+方案编写作者：付宇豪@yuluoqc<br>
+作者邮箱：1173362798@qq.com<br>
+作者网站：http://yuluoqc.xyz<br>
+编写时间：2023-03-25日 修订版V1<br>
+项目开源方案：木兰宽松许可证, 第2版
 
 
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 1、开发规范
+针对API接口格式混乱，没有标准的RPC服务化，代码没有统一标准的开发规范，技术框架组件非标准化等一系列问题，定了一套相对标准、全面的技术开发规范，边写代码边梳理开发规范，引领团队走向统一标准化开发道路。
+## 1.1、命名规范
+应用命名规范、模块的划分、目录（包）的命名应当按照相对应的命名规范进行命名
+## 1.2、开发整体流程
+![Alt text](%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.png)
+## 2.1、需求管理
+概括解释：需求管理的第一步就是要梳理不同来源的需求，主要包括从产品定位出发、外部用户反馈、竞争对手情况、市场变化以及内部运营人员、客服人员、开发人员的反馈。首先技术TL对产品有足够认知和把控，简单来说就是我的产品是为了满足哪些人的哪些需求而做，产品需求一定要根植于客户的需求、根植于客户的环境。每款产品必定有其核心价值，能够为客户创造更多的价值，基于此考虑往往能得到一些核心需求，摒除价值不大的需求。
+很多时候需求的变更或增加是因为我们面临太多选择和想要的太多，没有适当的控制自己的欲望，并以自己的喜好来决定需求，这些因素很容易导致产品没有明确的方向、团队成员疲于奔命，但是却没有实际的成果。所以技术TL一定要能够评估出重新审视产品和筛选需求的优先级，识别每一个需求的必要性、重要性和实现成本。通过深思熟虑给团队明确方向并专注，聚焦资源的支配，确保团队的精力都聚焦在产品的核心需求上。
+解决方案：充分利用云效管理平台进行需求管理。在项目启动初期，展开全面的需求前期调研，深入评估需求的可行性，制定相应的可行性方案。由项目管理者统筹管理
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 2.1.1、前期任务分配管理
+在钉钉云效管理平台上对任务进行拆分和管理是提高团队工作效率和项目执行质量的重要方法。首先，针对项目任务，应根据任务的复杂度和优先级，合理拆分为小任务，并在平台上创建对应的子任务。每个子任务应设定明确的可实施时间，确保任务的及时完成。在设定时间时，需考虑任务的工作量、优先级和其他相关因素，制定合理的时间节点。
 
-```
-cd existing_repo
-git remote add origin http://10.70.25.163/2021035107087/Project_development_system.git
-git branch -M main
-git push -uf origin main
-```
+严格按照钉钉云效管理平台规定的任务管理流程进行操作，确保任务的规范性和透明度。任务分配应清晰明了，指派责任人并设定具体的截止日期，以便监控任务进度和质量。团队成员需要实时更新任务进展情况，及时反馈问题和风险，保持团队间的协作和沟通畅通。
 
-## Integrate with your tools
+在执行过程中，如遇特殊情况需要调整任务计划，应提前汇报给相关负责人并经过审批，以确保团队整体目标的顺利实现。通过钉钉云效管理平台的任务管理功能，团队成员可以清晰了解任务分工和进度，有助于提升团队协作效率，确保项目按时高质量完成。因此，严格遵循平台规定，按照任务管理流程操作，对于项目的顺利进行和团队的有效管理至关重要。
 
-- [ ] [Set up project integrations](http://10.70.25.163/2021035107087/Project_development_system/-/settings/integrations)
+项目负责人对于前期开展的项目评审会应确定整套系统的功能，针对相关功能分配和协调各个部门相对应的管理规章制度，对于任务进行详细化拆分。并登记系统，任务分配时应开展任务分配评审会，各部门负责人与项目参与者应进行集中探讨
+## 2.2、技术架构评审
+概括解释：互联网时代，大家提倡敏捷迭代，总嫌传统方式太重，流程复杂，影响效率，什么都希望短平快，在扁平化的组织中，经常是需求火速分发到一线研发，然后就靠个人折腾去了，其实技术架构评审这同样是一个非常重要的环节。架构评审或技术方案评审的价值在于集众人的力量大家一起来分析看看方案里是否有坑，方案上线后是否会遇到不可逾越的重大技术问题，提前尽可能把一些事情先考虑到，提出质疑其实对项目的健康发展有很大的好处。
+解决方案：
+基于架构评审，我们的目标核心是要满足以下几点：
+设计把关，确保方案合格，各方面都考虑到了，避免缺陷和遗漏，不求方案多牛，至少不犯错。
+保证架构设计合理和基本一致，符合整体原则。
+维持对系统架构的全局认知，避免黑盒效应。
+通过评审发掘创新亮点，推广最佳实践。
+架构设计既要保证架构设计的合理性和可扩展性，又要避免过度设计。架构设计不仅仅是考虑功能实现，还有很多非功能需求，以及持续运维所需要的工作，需要工程实践经验，进行平衡和取舍。
+## 2.2.1、功能表规范
+功能确定规定：在项目开发阶段，开发团队需通过会议或讨论确定项目功能范围和优先级，确保明确目标和开发方向。
+功能需求清单制作：开发团队根据确定的功能范围，使用思维导图软件制作功能需求清单，详细列出每个功能的描述、优先级和相关要求。
 
-## Collaborate with your team
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+功能思维导图制作规范：使用思维导图软件绘制功能思维导图时，应注意清晰展示各功能模块之间的关系，标注功能名称、描述和重要参数，以便团队成员理解和执行。
+交互行为确定：在功能需求清单中，明确定义各功能模块的交互行为，包括用户与系统的交互流程、功能触发条件和预期效果。
+功能位置确定：功能需求清单中需明确每个功能在系统界面或页面中的位置，确保用户可以轻松找到所需功能并提升用户体验。
+变更管理：如需对功能需求进行调整或修改，需经过项目负责人或相关审批流程，避免随意变更导致项目延期或不必要的工作量增加。
 
-## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
+## 2.2.2、UI设计团队规范
+在将思维导图和功能图交接给UI设计团队之后，为了确保设计团队按照功能需求清单进行设计，并保持设计风格的一致性，制定以下约束措施：
+团队需召开UI设计评审会，与开发和技术与产品经理对接相关设计稿，对设计进行确定定稿
+1. 设计约束规范：明确规定设计团队必须严格按照给定的思维导图和功能图进行设计，不得随意增删功能或调整交互行为。
+2. 风格统一要求：规定设计团队在设计界面风格时，需遵循公司规定的设计风格和色彩搭配要求，确保整体界面风格统一。
+3. 交互设计规范：约束设计团队在设计交互行为时，需按照功能需求清单中明确定义的交互行为进行设计，保持一致性和用户友好性。
+4. 设计反馈机制：建立设计团队与开发团队的沟通渠道，设计团队需定期向开发团队反馈设计进展和需求实现情况，及时解决可能存在的问题。
+5. 验收与审批流程：制定设计稿的验收和审批流程，确保设计团队提交的设计稿符合功能需求清单和公司标准，减少重新设计的次数。
+6. 变更管理：如需对设计稿进行调整或修改，需经过项目负责人或相关审批流程，避免频繁变更导致项目延期或额外成本。
+2.2.3、数据库设定
+数据库设计规范是确保数据库系统高效运行和数据安全的关键。规范应包括数据库结构设计、命名规范、数据类型选择、外键约束、索引策略、数据备份和恢复方案等内容。设计规范要求数据库表结构合理，字段命名清晰具有可读性，数据类型选择符合存储需求且节约空间。外键约束用于维护数据完整性，索引策略需考虑查询性能，合理选择创建索引的字段。备份和恢复方案应定期进行，确保数据安全可靠。同时，规范还应包括权限管理、性能优化、版本控制等内容，以提升数据库系统的稳定性和效率。
+对于约定好的数据库应分为 测试库 正式库两种版本 对于前期数据库设计应从ER图开始，对功能进行审查，以功能进行出发，设计相对应的数据库字段，数据库一经设计不要随意修改数据库架构
+数据库在设计时应以功能为主，并开启数据库设计评审
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## 2.2.2、接口设计规范
+在设计接口时，基于 ApiPost 的接口设计规范应该包括以下方面的内容：
+接口命名规范：确保接口名称清晰、简洁，并能准确反映接口功能。
+HTTP 方法的正确使用：合理选择 GET、POST、PUT、DELETE 等方法，符合 RESTful 设计规范。
+请求参数：明确定义请求参数的数据类型、格式、是否必须，以及默认取值等信息。
+响应格式：规定接口返回的数据格式，如 JSON 或 XML，并定义响应状态码的含义。
+错误处理：定义接口错误返回的格式和信息，包括错误码、错误消息等，便于客户端处理异常情况。
+安全性：确保接口传输数据加密，对敏感信息进行适当的加密处理，防止信息泄露。
 
-***
+版本控制：考虑接口版本控制机制，避免因接口变动导致客户端不兼容。
+接口文档：编写清晰详细的接口文档，包括接口功能描述、参数说明、示例请求和响应等内容。
+性能优化：设计高效的接口结构，避免不必要的数据传输和处理，提升接口响应速度。
 
-# Editing this README
+接口一经设计并且通过三端（参与开发的工程师与架构师）审查以后，无特殊情况不对接口进行修改，针对于某一端非技术实现原因修改接口，应召开接口变更评审会对需要更改的接口进行评审，三端一致通过后对接口进行修改，如特殊情况需向项目管理实施方案者和管理与架构师进行协商处理
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## 2.3、架构评审需要以下几点
+1.技术选型：为什么选用A组件不选用B、C组件，A是开源的，开源协议是啥？基于什么语言开发的，出了问题我们自身是否能够维护？性能方面有没有压测过？这些所有问题作为技术选型我们都需要考虑清楚，才能做最终决定。
+2.高性能：产品对应的TPS、QPS和RT是多少？设计上会做到的TPS、QPS和RT是多少？而实际上我们整体随着数据量的增大系统性能会不会出现明显问题？随着业务量、数据量的上升，我们的系统的性能如何去进一步提高？系统哪个环节会是最大的瓶颈？是否有抗突发性能压力的能力，大概可以满足多少的TPS和QPS，怎么去做来实现高性能，这些问题都需要我们去思考。
+3.高可用：是否有单点的组件，非单点的组件如何做故障转移？是否考虑过多活的方案？是否有数据丢失的可能性？数据丢失如何恢复？出现系统宕机情况，对业务会造成哪些影响？有无其他补救方案？这些问题需要想清楚，有相应的解决方案。
+4.可扩展性：A和B的业务策略相差无几，后面会不会继续衍生出C的业务策略，**随着业务的发展哪些环节可以做扩展，如何做扩展？**架构设计上需要考虑到业务的可扩展性。
+5.可伸缩性：每个环节的服务是不是无状态的？是否都是可以快速横向扩展的？扩容需要怎么做手动还是自动？扩展后是否可以提高响应速度？这所有的问题都需要我们去思考清楚，并有对应的解决方案。
+6.弹性处理：消息重复消费、接口重复调用对应的服务是否保证幂等？是否考虑了服务降级？哪些业务支持降级？支持自动降级还是手工降级？是否考虑了服务的超时熔断、异常熔断、限流熔断？触发熔断后对客户的影响？服务是否做了隔离，单一服务故障是否影响全局？这些问题统统需要我们想清楚对应的解决方案，才会进一步保证架构设计的合理性。
+7.兼容性：上下游依赖是否梳理过，影响范围多大？怎么进行新老系统替换？新老系统能否来回切换？数据存储是否兼容老的数据处理？如果对你的上下游系统有影响，是否通知到上下游业务方？上下游依赖方进行升级的方案成本如何最小化？这些问题需要有完美的解决方案，稍有不慎会导致故障。
+8.安全性：是否彻底避免SQL注入和XSS？是否有数据泄露的可能性？是否做了风控策略？接口服务是否有防刷保护机制？数据、功能权限是否做了控制？小二后台系统是否做了日志审计？数据传输是否加密验签？应用代码中是否有明文的AK/SK、密码？这些安全细节问题需要我们统统考虑清楚，安全问题任何时候都不能轻视。
+9.可测性：测试环境和线上的差异多大？是否可以在线上做压测？线上压测怎么隔离测试数据？是否有测试白名单功能？是否支持部署多套隔离的测试环境？测试黑盒白盒工作量的比例是怎么样的？新的方案是否非常方便测试，在一定程度也需要考量。
+10.可运维性：系统是否有初始化或预热的环节？数据是否指数级别递增？业务数据是否需要定期归档处理？随着时间的推移如果压力保持不变的话系统需要怎么来巡检和维护？业务运维方面的设计也需要充分考虑到。
+11.监控与报警：对外部依赖的接口是否添加了监控与报警？应用层面系统内部是否有暴露了一些指标作监控和报警？系统层面使用的中间件和存储是否有监控报警？只有充分考虑到各个环节的监控、报警，任何问题会第一时间通知到研发，阻止故障进一步扩散。
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 2.4、代码评审与管理（开发生命周期）
+代码质量包括功能性代码质量和非功能性代码质量，功能质量大多通过测试能够去发现问题，非功能性代码质量用户不能直接体验到这种质量的好坏，代码质量不好，最直接的“受害者”是开发者或组织自身，因为代码质量好坏直接决定了软件的可维护性成本的高低。代码质量应该更多的应该从可测性，可读性，可理解性，容变性等代码可维护性维度去衡量.
+基于GItlab平台（http://10.70.25.163/users/sign_in）当中的代码评审系统，使用Wiki（ 为您的项目编写文档），建设激活CI/CD（流水线系统） 与分析系统 （暂时功能未实现）完善代码评审相关规章制度（推进yml自动化测试与自动化部署相关解决方案，解决代码bug）
+对于GIt分支相关管理规定：以功能为支线进行多人合作开发，应保证（main/master分支使用保护相关设定）对于支分支应保证开发之前严格要求上班拉仓库，下班推仓库，不修改代码框架，不修改相关核心代码，以免造成合并时发生冲突，对于系统识别到的冲突应联系相关负责责任人与技术负责人与开发人员进行协商
 
-## Name
-Choose a self-explaining name for your project.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## 2.5、Code Review
+确认代码功能：代码实现的功能满足产品需求，逻辑的严谨和合理性是最基本的要求。同时需要考虑适当的扩展性，在代码的可扩展性和过度设计做出权衡，不编写无用逻辑和一些与代码功能无关的附加代码。
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+1.编码规范：以开发规约、静态代码规约为前提，是否遵守了编码规范，遵循了最佳实践。除了形式上的要求外，更重要的是命名规范。目标是提高代码的可读性，降低代码可维护性成本。
+2.潜在的BUG：可能在最坏情况下出现问题的代码，包括常见的线程安全、业务逻辑准确性、系统边界范围、参数校验，以及存在安全漏洞(业务鉴权、灰产可利用漏洞)的代码。
+3.文档和注释：过少（缺少必要信息）、过多（没有信息量）、过时的文档或注释，总之文档和注释要与时俱进，与最新代码保持同步。
+4.重复代码：当一个项目在不断开发迭代、功能累加的过程中，重复代码的出现几乎是不可避免的，通常可以通过PMD工具进行检测。类型体系之外的重复代码处理通常可以封装到对应的Util类或者Helper类中，类体系之内的重复代码通常可以通过继承、模板模式等方法来解决。
+5.复杂度：代码结构太复杂（如圈复杂度高），难以理解、测试和维护。
+6.监控与报警：基于产品的需求逻辑，需要有些指标来证明业务是正常工作的，如果发生异常需要有监控、报警指标通知研发人员处理，review业务需求对应的监控与报警指标也是Code Review的重点事项。
+7.测试覆盖率：编写单元测试，特别是针对复杂代码的测试覆盖是否足够。
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 2.6、发布计划评审
+涉及到10人/日以上的项目，必须有明确的发布计划，并组织项目成员统一参加项目发布计划review，发布计划主要包含如下几点：
+1）明确是否有外部依赖接口，如有请同步协调好业务方；
+2）发布前配置确认包括配置文件、数据库配置、中间件配置等各种配置，尤其各种环境下的差异化配置项；
+3）二方库发布顺序，是否有依赖；
+4）应用发布顺序；
+5）数据库是否有数据变更和订正，以及表结构调整；
+6）回滚计划，必须要有回滚计划，发布出现问题要有紧急回滚策略；
+7）生产环境回归测试重点Case。
+3、技术规划与管理
+对于上线并涉及到后期维护的相关项目，每周都要做系统健康度巡检
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+# 整体流程思维导图
+![Alt text](%E6%95%8F%E6%8D%B7%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86%E8%A7%84%E5%AE%9A.png)
